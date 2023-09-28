@@ -1,0 +1,108 @@
+
+.main__title{
+    position: absolute;
+    left: 48%;
+    top: 30px;
+    color: $text;
+    font-size: 30px;
+    z-index: 2; 
+    
+
+}
+.main__section1{
+    display: flex;
+    height: 1500px;
+    
+    .main__img1{
+        position: sticky;
+        top: 0;
+   
+    height: 100vh;
+    width: 700px;
+}
+.main__item1{
+    background-color: $primary;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 200px 100px;
+    padding-top: 200px;
+    h1{
+        font-size: 60px;
+        margin-bottom: 80px;
+    }
+    p{
+        font-size: 30px ;
+        color: $text;
+        font-weight: 700;
+        line-height: 2;
+
+    }
+}
+}
+
+.main__section2{
+    display: flex;
+    height: 1500px;
+    .main__img2{
+    transform: scaleX(-1);
+    height: 100vh;
+    width: 700px;
+    position: sticky;
+    top: 0;
+    
+    }
+.main__item2{
+    background-color: $secondary;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 100px;
+    
+    
+    h1{
+        font-size: 50px;
+        margin-bottom: 80px;
+    }
+    p{
+        font-size: 40px ;
+        color: $text;
+        font-weight: 700;
+        line-height: 2;
+
+    }
+    strong{
+        display: block;
+        font-weight: 400;
+        font-size: 30px;
+    }
+    blockquote{
+       font-size: 30px ;
+        color: $text;
+        font-weight: 700;
+        line-height: 2; 
+        
+    }
+}
+}
+
+
+
+.linkToDogList{
+    padding: 30px 50px;
+    background-color: $primary;
+    color: $text;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 140px;
+    z-index: 0;
+    
+}
+
+
+
