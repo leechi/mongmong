@@ -1,0 +1,80 @@
+.dog-list{
+    display: flex;
+    
+    
+    
+    align-items: center;
+    justify-content: flex-start;
+
+    flex-wrap: wrap;
+    background-color: $background;
+    height: auto;
+    width: 100%;
+    padding: 0 190px;
+    div{
+        position: relative;
+        margin: 30px;
+        height: 200px;
+    }
+    .dog-list__list{
+        height: 200px;
+        width: 200px;
+        border-radius: 30px;
+        box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.4);
+        &:hover{
+            transition: 0.5s all ease;
+            scale: 1.1;
+            box-shadow: 10px 30px 10px rgba($color: #000000, $alpha: 0.4);
+        }
+        
+    }
+    .dog-list__name{
+        position: absolute;
+        bottom: 20px;
+        left: 30px;
+        z-index: 2;
+        background-color: $primary;
+        color: white;
+        
+        
+        
+        border-radius: 40px;
+        padding: 8px 20px;
+        font-size: 18px;
+        font-weight: 700;
+        
+    }
+}
+
+.banner__box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $background;
+.banner{
+    width: 1200px;
+    height: 260px;
+    border-radius: 20px;
+    background-color: $primary;
+    margin: 60px;
+}
+
+}
+
+.nav, .nav-primary{
+    width: 100%;
+    background-color: $background;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 190px;
+    button{
+        font-weight: 700;
+        margin-right: 20px;
+    }
+}
+
+.nav-primary{
+    background-color: $secondary;
+}
