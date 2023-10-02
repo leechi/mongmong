@@ -42,7 +42,7 @@ const DogList = () => {
         <div>
           
           
-          {user === null ? <button onClick={() => navigate('/login')}>로그인</button> : <div><button onClick={handleLogout}>로그아웃</button> <span className='user'>{ user.id }님</span> </div>}
+          {user === null ? <button onClick={() => navigate('/login')}>로그인</button> : <div> <span onClick={()=>navigate('/mypage')} className='user'>{ user.id }님</span><button onClick={handleLogout}>로그아웃</button> </div>}
           
           
           </div>
@@ -54,7 +54,7 @@ const DogList = () => {
         <Carousel
           infinite={true}
           autoPlay={true}
-          autoPlaySpeed={1000}
+          autoPlaySpeed={5000}
           
           responsive={responsive}>
           
@@ -69,8 +69,8 @@ const DogList = () => {
     <section className='dog-list'>
       
       {
-        doglist.map((data, i) => (
-          <div onClick={()=>navigate('/doglist/detail/1')}>
+        dog.dog.map((data, i) => (
+          <div onClick={()=>navigate(`/doglist/detail/${i+1}`)}>
             <img src={`/image/dog${i+1}.jpeg`} className='dog-list__list'/>
             <span className='dog-list__name'>{dog.dog[i].name }</span>
           </div>

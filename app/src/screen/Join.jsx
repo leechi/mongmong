@@ -34,10 +34,7 @@ const Join = () => {
     <div>
     <nav className='nav-primary'>
         <h1 onClick={()=>navigate('/doglist')}>몽몽</h1>
-        <div>
-        <button>검색</button>
-          <button onClick={()=>navigate('/login')}>로그인</button>
-          </div>
+        
       </nav>
     <div className='join'>
       <button className='google__login'>

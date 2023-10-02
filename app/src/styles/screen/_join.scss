@@ -86,3 +86,14 @@
         
     }
 }
+.nav-primary{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        width: 100%;
+    background-color: $background;
+    display: flex;
+    padding: 20px 190px;
+    color: $text;
+}
+
