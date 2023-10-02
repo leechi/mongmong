@@ -1,10 +1,7 @@
 .dog-list{
-    display: flex;
-    
-    
-    
+    display: flex;    
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 
     flex-wrap: wrap;
     background-color: $background;
@@ -31,33 +28,38 @@
     .dog-list__name{
         position: absolute;
         bottom: 20px;
-        left: 30px;
+        left: 25px;
         z-index: 2;
         background-color: $primary;
         color: white;
-        
-        
-        
         border-radius: 40px;
         padding: 8px 20px;
         font-size: 18px;
         font-weight: 700;
-        
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
 .banner__box{
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
+
     background-color: $background;
+
 .banner{
-    width: 1200px;
+    display: flex;
+    width: 100%;
     height: 260px;
-    border-radius: 20px;
+    
     background-color: $primary;
-    margin: 60px;
+    
+    transform: none;
+}
+.react-multi-carousel-item{
+    
 }
 
 }
@@ -77,4 +79,8 @@
 
 .nav-primary{
     background-color: $secondary;
+}
+
+.user{
+    font-weight: 700;
 }

@@ -5,7 +5,7 @@ import Main from './Main'
 import DogList from './DogList'
 import Join from './Join'
 import Login from './Login'
-import Header from '../components/Header'
+import Detail from './Detail'
 
 const Body = () => {
   return (
@@ -16,6 +16,7 @@ const Body = () => {
         <Route path='/doglist' element={<DogList />}></Route>
         <Route path='/join' element={<Join />}></Route>
         <Route path='/login' element={<Login />}></Route>
+        <Route path='/doglist/detail/:id' element={<Detail />}></Route>
       </Routes>
     </body>
   )

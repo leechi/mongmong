@@ -42,7 +42,8 @@ const Main = () => {
             <p>키우기전에 조금만 더 <br></br>
               알아보는 시간을 가져봐요</p>
           
-            <button onClick={ ()=>{navigate('/doglist')} } className='linkToDogList'>강아지 공부하기</button>  
+            <button onClick={() => { navigate('/doglist') }} className='linkToDogList'>강아지 공부하기</button>  
+            {/*  왜 밑으로 가냐면 지금 현재 페이지가 밑이라서 그런다 만약에 넘긴다음에 스크롤을 임의로 설정해줘야함 */}
           </div>
         
           

@@ -1,0 +1,94 @@
+.detail{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: $background;
+        width: 100%;
+        padding: 30px;
+        .detail__img{
+            height: 400px;
+            width: 400px;
+            border-radius: 30px;
+            margin-bottom: 30px;
+        }
+        .detail__name{
+            font-size: 20px;
+            background-color: $primary;
+            padding: 18px 60px;
+            color: white;
+            border-radius: 60px;
+        }
+        
+    }
+    footer{
+        
+        background-color: $primary;
+        width: 100%;
+        height: auto;
+        padding: 90px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .detail__tab-btn{
+            width: 1200px;
+            display: flex;
+            align-items: center;
+            background-color: $tertiary;
+            justify-content: space-around;
+            height: 100px;
+            border-radius: 100px;
+            margin-bottom: 50px;
+            .onBtn{
+                background-color: $primary;
+                
+                transition: 1s all ease-in;
+                
+                
+            }
+            
+            li{
+                
+                padding: 20px 30px;
+                border-radius: 100px;
+                font-weight: 700;
+                font-size: 20px;
+                color: white;
+                display: flex;
+                align-items: center;
+                position: relative;
+                
+                &:hover{
+                    background-color: $primary;
+                    transition: 1s all ease-in;
+                    opacity: 1;
+                    padding:70px;
+                }
+
+                img{
+                    width:25px ;
+                    margin-right: 10px;
+                    
+                    
+                }
+                
+                
+            }
+
+        }
+        .detail__tab-desc{
+            width: 1200px;
+            background-color: $background;
+            height: 1000px;
+            border-radius: 30px;
+        }
+    }
+}
+

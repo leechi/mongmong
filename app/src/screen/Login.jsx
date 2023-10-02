@@ -1,9 +1,26 @@
-import React from 'react'
+import axios from '../axios/axios'
+import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 
+
 const Login = () => {
+    let idRef = useRef()
+  let pwRef = useRef()
   const handleLogin = (e) => {
     e.preventDefault()
+    axios.post('user/login', {
+      id: idRef.current.value,
+      pw: pwRef.current.value
+    }).then(res => {
+      console.log(res.data.msg)
+      if (res.data.msg == '성공') {
+        alert('성공!')
+        sessionStorage.setItem('user', JSON.stringify(res.data.user))
+        window.location.href ='/doglist'
+      } else {
+        alert('아이디 혹은 비밀번호를 확인해주세요.')
+      }
+    })
   }
   const navigate = useNavigate()
   return (
@@ -21,8 +38,8 @@ const Login = () => {
         <span>구글로 로그인하기</span>
       </button>
       <form onSubmit={handleLogin}>
-        <input type="text" placeholder='이름'/>
-        <input type="text" placeholder='비밀번호'/>
+        <input type="text" ref={idRef} placeholder='이름'/>
+        <input type="text" ref={pwRef} placeholder='비밀번호'/>
         <button className='button350'>로그인</button>
         <span>아이디가 없으시나요? <strong onClick={()=>{navigate('/join')}}>회원가입</strong></span>
       </form>

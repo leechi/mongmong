@@ -1,0 +1,35 @@
+{
+  "dog": [
+    {
+      "name": "비글",
+      "description": "이 강아지는 매우 친근하고 활발한 성격을 가지고 있습니다. 사람들과 잘 어울리며 공원에서 뛰놀기를 좋아합니다.",
+      "videoUrl": "https://www.youtube.com/embed/2JJqg0JYYkI",
+      "imagePath": "/images/dog1.jpg"
+    },
+    {
+      "name": "진돗개",
+      "description": "이 강아지는 매우 똑똑하고 재미있는 개성을 가지고 있습니다. 새로운 물건을 찾는 것을 좋아하며, 훈련하기가 쉽습니다.",
+      "videoUrl": "https://www.youtube.com/embed/vW6Ry2kdsBc?list=PLVh3TM0B0WtksY4ZQVNdD0aTG1Qm1mQNM",
+      "imagePath": "/image/dog2.jpeg"
+    },
+    {
+      "name": "코카스파니엘",
+      "description": "이 강아지는 매우 온순하고 가족 친화적인 성격을 가지고 있습니다. 어린이와 함께 시간을 보내기를 좋아합니다.",
+      "videoUrl": "https://www.youtube.com/embed/GGd0vETcRQA",
+      "imagePath": "/image/dog3.jpg"
+    },
+    {
+      "name": "프렌치불독",
+      "description": "이 강아지는 매우 온순하고 가족 친화적인 성격을 가지고 있습니다. 어린이와 함께 시간을 보내기를 좋아합니다.",
+      "videoUrl": "https://www.youtube.com/embed/--RH6FC_uXs?list=PLVh3TM0B0WtksY4ZQVNdD0aTG1Qm1mQNM",
+      "imagePath": "/image/dog4.jpg"
+    },
+        {
+      "name": "골드 리트리버",
+      "description": "이 강아지는 매우 온순하고 가족 친화적인 성격을 가지고 있습니다. 어린이와 함께 시간을 보내기를 좋아합니다.",
+      "videoUrl": "https://www.youtube.com/embed/FABOw10lRbg",
+      "imagePath": "/image/dog5.jpg"
+    }
+
+  ]
+}
