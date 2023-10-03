@@ -4,6 +4,21 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import dog from '../dog.json'
 
+const CustomRightArrow = ({ onClick, ...rest }) => {
+  return (
+    <button onClick={onClick} className='arrow'>
+      ＞
+    </button>
+  );
+};
+const CustomLeftArrow = ({ onClick, ...rest }) => {
+  return (
+    <button onClick={onClick} className='arrow'>
+      ＜
+    </button>
+  );
+};
+
 const DogList = () => {
   
   console.log()
@@ -55,7 +70,11 @@ const DogList = () => {
           infinite={true}
           autoPlay={true}
           autoPlaySpeed={5000}
+          arrows={true}
           
+          customRightArrow={<CustomRightArrow />}
+      customLeftArrow={<CustomLeftArrow />}
+          customTransition="all .5"
           responsive={responsive}>
           
           <div className="banner"> </div>
@@ -72,7 +91,7 @@ const DogList = () => {
         dog.dog.map((data, i) => (
           <div onClick={()=>navigate(`/doglist/detail/${i+1}`)}>
             <img src={`/image/dog${i+1}.jpeg`} className='dog-list__list'/>
-            <span className='dog-list__name'>{dog.dog[i].name }</span>
+            <span className='dog-list__name'>{dog.dog[i].name}</span>
           </div>
         ))
       }

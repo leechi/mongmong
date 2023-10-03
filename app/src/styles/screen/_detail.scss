@@ -96,3 +96,49 @@ iframe{
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 0.4);
 }
+
+
+.abandoned{
+    display: flex;
+    
+    width: 100%;
+    margin-bottom: 20px;
+}
+.abandoned__img{
+    width: 300px;
+    height: 300px;
+    
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+table{
+display:flex;
+align-items: center;
+display: -ms-flexbox;
+background-color: $background;
+width: 240px;
+
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+padding: 10px;
+
+}
+
+tbody
+{display:flex}
+
+th,td{
+    display:block;
+    margin-bottom: 20px;
+}
+
+
+.dog__description{
+    background-color: $background;
+    height: 300px;
+    font-size: 30px;
+    padding: 40px;
+    width: 1200px;
+    border-radius: 20px;
+}
