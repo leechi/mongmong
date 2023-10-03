@@ -20,7 +20,7 @@ const Detail = () => {
   }
 
     
-  let [box, setBox] = useState('특징')
+  let [box, setBox] = useState('유기견')
   useEffect(() => {
     
   
@@ -48,18 +48,20 @@ const Detail = () => {
                {user === null ? <button onClick={() => navigate('/login')}>로그인</button> : <div> <span onClick={()=>navigate('/mypage')} className='user'>{ user.id }님</span><button onClick={handleLogout}>로그아웃</button> </div>}
                 </div>
             </nav>
-          <header className='detail'>
-              <img className='detail__img' src={dogs.imagePath} alt="" />
-              <h3 className='detail__name'>{dogs.name }</h3>
+      <header>
+        <h1 className='bark'>to much bark</h1>
+        <img className='detail__img' src={dogs.imagePath} alt="" />
+            <div>
+          <p className='speech-bubble'>{dogs.desc}</p>
+          <p></p>
+          </div>
           </header>      
           <footer>
               <ul className='detail__tab-btn'>
-                  <li className={box === '특징' ? 'onBtn' : null} onClick={() => setBox('특징')}><img src='/image/feature.png'></img>소개</li>
                   <li className={box === '유기견' ? 'onBtn' : null} onClick={()=>setBox('유기견')}><img src='/image/dog.png'/>유기견</li>
                   <li className={box === '영상' ? 'onBtn' : null} onClick={()=>setBox('영상')}><img src='/image/video.png'/>견종백과</li>
               </ul>
-              <div >
-                  {box === '특징' ? <div className='dog__description'>{ dogs.description }</div> : null}
+              <div className='footer'>
           {box === '유기견' ?
             
               dogfe.map((data, i) => 
@@ -72,12 +74,14 @@ const Detail = () => {
                       <th>나이</th>
                       <th>품종</th>
                       <th>성별</th>
+                      <th>중성화</th>
                       <th>보호소</th>
                     </thead>
                     <tbody>
                       <tr>
                         <td>{data.AGE_INFO}</td>
                         <td>{data.SPECIES_NM}</td>
+                        <td>{data.NEUT_YN}</td>
                         <td>{data.SEX_NM}</td>
                         <td>{data.SHTER_NM}</td>
                       </tr>

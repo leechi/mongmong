@@ -69,17 +69,23 @@ const DogList = () => {
         <Carousel
           infinite={true}
           autoPlay={true}
-          autoPlaySpeed={5000}
+          autoPlaySpeed={3000}
           arrows={true}
           
           customRightArrow={<CustomRightArrow />}
       customLeftArrow={<CustomLeftArrow />}
-          customTransition="all .5"
-          responsive={responsive}>
           
-          <div className="banner"> </div>
-          <div className="banner" style={ {backgroundColor:"tomato"}}> </div>
-          <div className="banner" style={{backgroundColor:"yellow"}}> </div>
+          responsive={responsive}>
+             <div className='banner' >
+            <img className="banner__img" src="image/banner2.jpeg" alt="" />
+            <p>당신은 <br /><strong>좋은가족</strong>이 될<br></br> 준비가 되었나요?</p>
+          </div>
+          <div className='banner' >
+            <img className="banner__img" src="image/banner1.png" alt="" />
+            
+          </div>
+       
+
           
    
           </Carousel>;
