@@ -6,7 +6,7 @@ import DogList from './DogList'
 import Join from './Join'
 import Login from './Login'
 import Detail from './Detail'
-import Mypage from './Mypage'
+
 
 const Body = () => {
   return (
@@ -17,7 +17,6 @@ const Body = () => {
         <Route path='/doglist' element={<DogList />}></Route>
         <Route path='/join' element={<Join />}></Route>
         <Route path='/login' element={<Login />}></Route>
-        <Route path='/mypage' element={<Mypage />}></Route>
         <Route path='/doglist/detail/:id' element={<Detail />}></Route>
       </Routes>
     </body>

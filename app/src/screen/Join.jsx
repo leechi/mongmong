@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import axios from '../axios/axios'
 
 const Join = () => {
-
   let idRef = useRef()
   let pwRef = useRef()
   let pw2Ref = useRef()

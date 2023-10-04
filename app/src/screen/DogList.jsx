@@ -1,8 +1,8 @@
 import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import Carousel from "react-multi-carousel"
 import dog from '../dog.json'
+import "react-multi-carousel/lib/styles.css"
 
 const CustomRightArrow = ({ onClick, ...rest }) => {
   return (
@@ -10,14 +10,14 @@ const CustomRightArrow = ({ onClick, ...rest }) => {
       ＞
     </button>
   );
-};
+}
 const CustomLeftArrow = ({ onClick, ...rest }) => {
   return (
     <button onClick={onClick} className='arrow'>
       ＜
     </button>
   );
-};
+}
 
 const DogList = () => {
   
@@ -46,63 +46,48 @@ const DogList = () => {
     breakpoint: { max: 464, min: 0 },
     items: 1
   }
-};
-
-  
-  const doglist = [1,2,3,4,5]
+}
   return (
     <div>
-    <nav className='nav'>
+      <nav className='nav'>
         <h1 onClick={()=>navigate('/doglist')}>몽몽</h1>
         <div>
-          
-          
-          {user === null ? <button onClick={() => navigate('/login')}>로그인</button> : <div> <span onClick={()=>navigate('/mypage')} className='user'>{ user.id }님</span><button onClick={handleLogout}>로그아웃</button> </div>}
-          
-          
+          {user === null ? <button onClick={() => navigate('/login')}>로그인</button>
+            : <div>
+                <span onClick={() => navigate('/mypage')} className='user'>{user.id}님</span>
+                <button onClick={handleLogout}>로그아웃</button>
+              </div>}
           </div>
-      </nav>
-      {/* api받아올거임 */}
-      
+      </nav>      
       <header className='banner__box'>
-        
         <Carousel
           infinite={true}
           autoPlay={true}
           autoPlaySpeed={3000}
           arrows={true}
-          
           customRightArrow={<CustomRightArrow />}
-      customLeftArrow={<CustomLeftArrow />}
-          
+          customLeftArrow={<CustomLeftArrow />}
           responsive={responsive}>
-             <div className='banner' >
+          <div className='banner' >
             <img className="banner__img" src="image/banner2.jpeg" alt="" />
             <p>당신은 <br /><strong>좋은가족</strong>이 될<br></br> 준비가 되었나요?</p>
+            </div>
+            <div className='banner' >
+            <img className="banner__img" src="image/banner1.png" alt="" />  
           </div>
-          <div className='banner' >
-            <img className="banner__img" src="image/banner1.png" alt="" />
-            
-          </div>
-       
-
-          
-   
-          </Carousel>;
-          
+        </Carousel>;
       </header>
-    <section className='dog-list'>
-      
+      <section className='dog-list'>
       {
         dog.dog.map((data, i) => (
-          <div onClick={()=>navigate(`/doglist/detail/${i+1}`)}>
+          <div onClick={()=>navigate(`/doglist/detail/${dog.dog[i].id}`)}>
             <img src={`/image/dog${i+1}.jpeg`} className='dog-list__list'/>
             <span className='dog-list__name'>{dog.dog[i].name}</span>
           </div>
         ))
       }
       </section>
-      </div>
+    </div>
   )
 }
 
